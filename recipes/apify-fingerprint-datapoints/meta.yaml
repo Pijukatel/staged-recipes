@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apify_fingerprint_datapoints-{{ version }}.tar.gz
-  sha256: e1449a37c023cc0b934834c5483a6a9eb5d2cada8d213c00d19e8ec965b7
+  sha256: 785fb5c784956354ef950aae334b30b9c841c6203cd821e8e002bbfeed309355
 
 build:
   noarch: python

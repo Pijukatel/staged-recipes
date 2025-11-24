@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crawlee-{{ version }}.tar.gz
-  sha256: 8cca043a97d50ca43dcf58ee11c4a9e4ebbf7e63f9462011f83171161f13
+  sha256: 3e700cdbe8600095e99c0653a7b332db8bfd14d9ba978d034ae682c7f3d30319
 
 build:
   entry_points:
