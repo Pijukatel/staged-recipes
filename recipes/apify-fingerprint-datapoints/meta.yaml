@@ -1,6 +1,5 @@
 {% set name = "apify-fingerprint-datapoints" %}
-{% set version = "0.0.3" %}
-{% set python_min = "3.9" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apify_fingerprint_datapoints-{{ version }}.tar.gz
-  sha256: 2d8c501562e2db745c2cca14cc05bc66a0e60251ae8f21f90bdbf8f647c8ffe2
+  sha256: e1449a37c023cc0b934834c5483a6a9eb5d2cada8d213c00d19e8ec965b7
 
 build:
   noarch: python

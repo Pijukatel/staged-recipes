@@ -1,5 +1,5 @@
 {% set name = "crawlee" %}
-{% set version = "0.6.11" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crawlee-{{ version }}.tar.gz
-  sha256: 746c59b726cce728d7d703e9d2e737ed5f9b2ea8409d3c5b4de0d728af7c0249
+  sha256: 8cca043a97d50ca43dcf58ee11c4a9e4ebbf7e63f9462011f83171161f13
 
 build:
   entry_points:
@@ -26,10 +26,8 @@ requirements:
     - browserforge >=1.2.3
     - cachetools >=5.5.0
     - colorama >=0.4.0
-    - curl-cffi >=0.9.0  # [linux]
     - eval-type-backport >=0.2.0
     - httpx >=0.27.0
-    - jinxed  # [win]
     - more-itertools >=10.2.0
     - protego >=0.4.0
     - psutil >=6.0.0
@@ -50,6 +48,10 @@ requirements:
     - playwright-python >=1.27.0
     - scikit-learn >=1.6.0
     - typer >=0.12.0
+    - __win  # [win]
+    - jinxed  # [win]
+    - __linux  # [linux]
+    - curl-cffi >=0.9.0  # [linux]
 
 test:
   imports:
