@@ -10,6 +10,8 @@ source:
   sha256: 44a5c53cd3249db9a74837a41ca7f4eae4e25abc5f499a8538f32c17054d607f
 
 build:
+  script_env:
+    - RUSTFLAGS=--cfg reqwest_unstable
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
