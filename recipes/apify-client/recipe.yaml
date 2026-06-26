@@ -1,17 +1,18 @@
-{% set name = "apify-client" %}
-{% set version = "3.0.4" %}
+context:
+  name: apify-client
+  version: "3.0.4"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apify_client-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apify_client-${{ version }}.tar.gz
   sha256: b53c622bae1a04ce5d75112bc6bcdd3955e1465155fa6a4e0eb50d7e6561ebbd
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: python -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -27,16 +28,14 @@ requirements:
     - pydantic >=2.11.0
     - email-validator
 
-test:
-  imports:
-    - apify_client
-  commands:
-    - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - apify_client
+      pip_check: true
 
 about:
-  home: https://docs.apify.com/api/client/python/
+  homepage: https://docs.apify.com/api/client/python/
   summary: Apify API client for Python
   description: |
     The Apify API client for Python is the official library to access the
@@ -44,10 +43,9 @@ about:
     like automatic retries and convenience functions that improve the Apify
     platform experience.
   license: Apache-2.0
-  license_family: APACHE
   license_file: LICENSE
-  doc_url: https://docs.apify.com/api/client/python/
-  dev_url: https://github.com/apify/apify-client-python
+  documentation: https://docs.apify.com/api/client/python/
+  repository: https://github.com/apify/apify-client-python
 
 extra:
   recipe-maintainers:
