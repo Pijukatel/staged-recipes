@@ -10,6 +10,13 @@ context:
 # with `--v3`; without it the recipe fails to evaluate. Installing the groups
 # also requires a V3-aware solver and V3 (sharded) repodata.
 #
+# WARNING: V3 is experimental. rattler-build explicitly advises against
+# publishing V3 packages to channels that other users or CI systems depend on
+# (use it only for experimentation/prototyping, and expect to rebuild from
+# source once the format stabilizes). This recipe is therefore a forward-looking
+# prototype and is not yet suitable for merging into the production conda-forge
+# channel.
+#
 # The `stagehand` extra is omitted because its `stagehand` dependency is not
 # available on conda-forge; the `all` group therefore also excludes it.
 package:
